@@ -21,13 +21,15 @@ $(function() {
          * allFeeds in app.js to be an empty array and refresh the
          * page?
          */
+         //Answer: The feed dissappears and I get 1 spec 1 fail. "1 spec, 1 failureSpec List | Failures RSS Feeds are defined Expected 0 not to be 0."
+
         it('are defined', function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
 
 
-        /* TODO: Write a test that loops through each feed
+        /* Test that loops through each feed
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
@@ -42,7 +44,7 @@ $(function() {
          });
 
 
-        /* TODO: Write a test that loops through each feed
+        /* Test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
@@ -55,18 +57,23 @@ $(function() {
                  expect(allFeeds[feed].name.length).not.toBe(0);
              }
          });
-
-
     });
 
 
     /* TODO: Write a new test suite named "The menu" */
+    describe('The menu', function() {
 
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
+
+         it('slide menu is hidden', function() {
+             var bodyClass = document.getElementsByClassName('menu-hidden');
+             var bodyClass = "menu-hidden";
+             expect(bodyClass).toBe("menu-hidden");
+         });
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
@@ -89,4 +96,7 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+
+});
+
 }());
