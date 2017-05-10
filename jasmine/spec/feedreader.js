@@ -27,7 +27,7 @@ $(function() {
         it('URLs are defined and not empty', function() {
             for (feed = 0; feed < allFeeds.length; feed++) {
                 //This line goes through each feed in the allFeeds object and checks if the url is defined
-                expect(allFeeds[feed].url.length).toBeDefined();
+                expect(allFeeds[feed].url).toBeDefined();
                 //This line goes though each feed in the allFeeds object and checks whether the URL length is zero. If it were zero, the URL would be empty.
                 expect(allFeeds[feed].url.length).not.toBe(0);
             }
@@ -42,7 +42,7 @@ $(function() {
         it('names are defined and not empty', function() {
             for (feed = 0; feed < allFeeds.length; feed++) {
                 //This line goes through each feed in the allFeeds object and checks if the name is defined
-                expect(allFeeds[feed].name.length).toBeDefined();
+                expect(allFeeds[feed].name).toBeDefined();
                 //This line goes though each feed in the allFeeds object and checks whether the name length is zero. If it were zero, the name would be empty.
                 expect(allFeeds[feed].name.length).not.toBe(0);
             }
