@@ -32,17 +32,26 @@ $(function() {
          * and that the URL is not empty.
          */
 
+         it('URLs are defined and not empty', function() {
+             for (feed = 0; feed < allFeeds.length; feed++) {
+                 //This line goes through each feed in the allFeeds object and checks if the url is defined
+                 expect(allFeeds[feed].url.length).toBeDefined();
+                 //This line goes though each feed in the allFeeds object and checks whether the URL length is zero. If it were zero, the URL would be empty.
+                 expect(allFeeds[feed].url.length).not.toBe(0);
+             }
+         });
+
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
 
-         it('names are defined', function() {
+         it('names are defined and not empty', function() {
              for (feed = 0; feed < allFeeds.length; feed++) {
                  //This line goes through each feed in the allFeeds object and checks if the name is defined
                  expect(allFeeds[feed].name.length).toBeDefined();
-                 //This line goes though each feed in the allFeeds object and checks whether the name length is zero
+                 //This line goes though each feed in the allFeeds object and checks whether the name length is zero. If it were zero, the name would be empty.
                  expect(allFeeds[feed].name.length).not.toBe(0);
              }
          });
