@@ -63,16 +63,15 @@ $(function() {
     /* TODO: Write a new test suite named "The menu" */
     describe('The menu', function() {
 
-        /* TODO: Write a test that ensures the menu element is
+        /* Test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
 
          it('slide menu is hidden', function() {
-             var bodyClass = document.getElementsByClassName('menu-hidden');
-             var bodyClass = "menu-hidden";
-             expect(bodyClass).toBe("menu-hidden");
+             //Check if <body> class is "menu-hidden"
+             expect(document.body.classList).toContain("menu-hidden");
          });
 
          /* TODO: Write a test that ensures the menu changes
@@ -80,6 +79,8 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+
+
 
     /* TODO: Write a new test suite named "Initial Entries" */
 
